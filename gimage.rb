@@ -5,21 +5,21 @@
 class Gimage < Formula
   desc "AI-powered image generation and processing CLI"
   homepage "https://github.com/apresai/gimage"
-  version "1.1.40"
+  version "1.1.43"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/apresai/gimage/releases/download/v1.1.40/gimage_1.1.40_Darwin_x86_64.tar.gz"
-      sha256 "c344fcb1f1e611d896924dccfef610c6490f35021a3945114a38aea49d962094"
+      url "https://github.com/apresai/gimage/releases/download/v1.1.43/gimage_1.1.43_Darwin_x86_64.tar.gz"
+      sha256 "8495642c01081b185c20b824c96d636a13bf9c5714c663d02cf81bd122839811"
 
       def install
         bin.install "gimage"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/apresai/gimage/releases/download/v1.1.40/gimage_1.1.40_Darwin_arm64.tar.gz"
-      sha256 "4d6ef562d006e9169f7d61bf80a5468b874ef3545deec0ff1b1fe9d673deb28b"
+      url "https://github.com/apresai/gimage/releases/download/v1.1.43/gimage_1.1.43_Darwin_arm64.tar.gz"
+      sha256 "81a2d0736b431dd7a7732277a7665e4dd952fa5b021bb7e5a1fc7758af5f53c7"
 
       def install
         bin.install "gimage"
@@ -29,15 +29,15 @@ class Gimage < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/apresai/gimage/releases/download/v1.1.40/gimage_1.1.40_Linux_x86_64.tar.gz"
-      sha256 "fcabf6ddff9662cc89f2f2edeafc0abd8c4925e96fcb878534607745733eed3a"
+      url "https://github.com/apresai/gimage/releases/download/v1.1.43/gimage_1.1.43_Linux_x86_64.tar.gz"
+      sha256 "944c9ca98f6a2c1632251a8f9e0f0756cc60aa4b16e66ad8cc16877d1762f452"
       def install
         bin.install "gimage"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/apresai/gimage/releases/download/v1.1.40/gimage_1.1.40_Linux_arm64.tar.gz"
-      sha256 "5fe0dd84102e171929d5590e39ca31c0dfd6546f7619ff1e2a14577ec1fed4cb"
+      url "https://github.com/apresai/gimage/releases/download/v1.1.43/gimage_1.1.43_Linux_arm64.tar.gz"
+      sha256 "256bb528f312f8867fd8b2f17764e94a9f827a7418427578ba521a26afc4a4e7"
       def install
         bin.install "gimage"
       end
