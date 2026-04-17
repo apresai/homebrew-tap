@@ -5,24 +5,34 @@
 class Twonb < Formula
   desc "AI-native markdown knowledge base with semantic search, RAG, and MCP server"
   homepage "https://github.com/apresai/2ndbrain"
-  version "0.1.16"
+  version "0.2.0"
   license "MIT"
   depends_on :macos
 
   if Hardware::CPU.intel?
-    url "https://github.com/apresai/2ndbrain/releases/download/v0.1.16/2nb_0.1.16_Darwin_x86_64.tar.gz"
-    sha256 "d2bb7ecb4669c4efb021f58878134c345665f3de46145e47e0d23a756f235a50"
+    url "https://github.com/apresai/2ndbrain/releases/download/v0.2.0/2nb_0.2.0_Darwin_x86_64.tar.gz"
+    sha256 "30e5ab56c4460983ab5bb333058a47196e8df7a6f6f6a5706969e85fc70c6607"
 
     define_method(:install) do
       bin.install "2nb"
+
+      # Generate and install shell completions so tab-complete
+      # and dynamic value suggestions work out of the box for
+      # Homebrew users.
+      generate_completions_from_executable(bin/"2nb", "completion")
     end
   end
   if Hardware::CPU.arm?
-    url "https://github.com/apresai/2ndbrain/releases/download/v0.1.16/2nb_0.1.16_Darwin_arm64.tar.gz"
-    sha256 "2f036355c33551393338abcb7c26dd0266c8c86a507bb122953ffb7ddeeb703b"
+    url "https://github.com/apresai/2ndbrain/releases/download/v0.2.0/2nb_0.2.0_Darwin_arm64.tar.gz"
+    sha256 "3e7bfb939d0b428bdc3a96885191c7456902af1de1af80619038b719f2564834"
 
     define_method(:install) do
       bin.install "2nb"
+
+      # Generate and install shell completions so tab-complete
+      # and dynamic value suggestions work out of the box for
+      # Homebrew users.
+      generate_completions_from_executable(bin/"2nb", "completion")
     end
   end
 
@@ -31,13 +41,16 @@ class Twonb < Formula
       To get started:
 
         # Initialize a new vault
-        2nb init --path ~/my-vault
+        2nb vault create ~/my-vault
 
         # Or open an existing Obsidian vault
         2nb import-obsidian ~/my-obsidian-vault
 
         # Set up local AI with Ollama
         2nb ai setup
+
+      Shell completions are installed automatically. Restart your shell
+      (or `source ~/.zshrc`) to pick them up.
 
       For full documentation:
       https://github.com/apresai/2ndbrain
