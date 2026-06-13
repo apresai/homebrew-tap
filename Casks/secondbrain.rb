@@ -1,10 +1,10 @@
 cask "secondbrain" do
-  version "0.8.0"
-  sha256 "b396d0b7d1b857d46ab475adab3b5e09c9b4bd487e36789cc55ac7068f4dc886"
+  version "0.8.1"
+  sha256 "9d4edee31172f38bbe84ad8480b6c80ae1c7d9b4ffb21d701f5195466364abb5"
 
   url "https://github.com/apresai/2ndbrain/releases/download/v#{version}/SecondBrain-#{version}-arm64.zip"
   name "SecondBrain"
-  desc "AI-native markdown knowledge base editor"
+  desc "AI companion dashboard for Obsidian vaults (semantic search, RAG, MCP)"
   homepage "https://github.com/apresai/2ndbrain"
 
   depends_on formula: "apresai/tap/twonb"
