@@ -5,13 +5,13 @@
 class Twonb < Formula
   desc "AI-native markdown knowledge base with semantic search, RAG, and MCP server"
   homepage "https://github.com/apresai/2ndbrain"
-  version "0.8.0"
+  version "0.8.1"
   license "MIT"
   depends_on :macos
 
   if Hardware::CPU.intel?
-    url "https://github.com/apresai/2ndbrain/releases/download/v0.8.0/2nb_0.8.0_Darwin_x86_64.tar.gz"
-    sha256 "4347fdc6fe7351ae1c627553ef99d177c1499934e0c6781a09f53ad71b7cb9fd"
+    url "https://github.com/apresai/2ndbrain/releases/download/v0.8.1/2nb_0.8.1_Darwin_x86_64.tar.gz"
+    sha256 "51a531f0ed7f3670a7db2ce644e5dc9e51c79fa9f2580187fe4e4915b16f685c"
 
     define_method(:install) do
       bin.install "2nb"
@@ -23,8 +23,8 @@ class Twonb < Formula
     end
   end
   if Hardware::CPU.arm?
-    url "https://github.com/apresai/2ndbrain/releases/download/v0.8.0/2nb_0.8.0_Darwin_arm64.tar.gz"
-    sha256 "2efa5ea2741dfe35398a6bd6dfe46d0a1b1f0cad7365c80955d890c8a7a875a5"
+    url "https://github.com/apresai/2ndbrain/releases/download/v0.8.1/2nb_0.8.1_Darwin_arm64.tar.gz"
+    sha256 "17353ce73d98bede0c30f5ad168b240279eb559afea8e2ced1420c38a91ba399"
 
     define_method(:install) do
       bin.install "2nb"
