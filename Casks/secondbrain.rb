@@ -1,8 +1,8 @@
 cask "secondbrain" do
-  version "0.9.8"
-  sha256 "02c3588e255c0e95ac02fad52731f9768f6ad7b49ca4fea21175fa9e02f3bb2c"
+  version "0.9.9"
+  sha256 "dd99374d839b5722fe00760323401d5ec87d028ab8ad627e5253c8801f5bb506"
 
-  url "https://github.com/apresai/2ndbrain/releases/download/v#{version}/SecondBrain-#{version}-arm64.zip"
+  url "https://github.com/apresai/2ndbrain/releases/download/v#{version}/SecondBrain-#{version}-arm64.dmg"
   name "SecondBrain"
   desc "AI companion dashboard for Obsidian vaults (semantic search, RAG, MCP)"
   homepage "https://github.com/apresai/2ndbrain"
