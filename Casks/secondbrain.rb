@@ -1,6 +1,6 @@
 cask "secondbrain" do
-  version "0.9.9"
-  sha256 "dd99374d839b5722fe00760323401d5ec87d028ab8ad627e5253c8801f5bb506"
+  version "0.9.10"
+  sha256 "f49c8c8ce9b834776ca722eac4dc49cc1dec18ff59c329b73eb2d97e4fa3a6e5"
 
   url "https://github.com/apresai/2ndbrain/releases/download/v#{version}/SecondBrain-#{version}-arm64.dmg"
   name "SecondBrain"
@@ -12,13 +12,12 @@ cask "secondbrain" do
   app "SecondBrain.app"
 
   caveats <<~EOS
-    SecondBrain shells out to the `2nb` CLI, installed automatically as a
-    dependency. `brew upgrade --cask secondbrain` does NOT bump the CLI, so
-    after upgrading the app run:
+    SecondBrain bundles its own version-matched `2nb` CLI and uses it for all
+    AI/indexing/lint work, so the app always runs a matching CLI. The `2nb`
+    formula is still installed as a dependency so you have `2nb` on your PATH
+    for the terminal and the Obsidian plugin. `brew upgrade --cask secondbrain`
+    does NOT bump that formula, so to refresh the command-line `2nb` run:
 
       brew upgrade apresai/tap/twonb
-
-    to keep the two in step. The app warns on its Home screen when the CLI is
-    behind.
   EOS
 end
