@@ -5,13 +5,13 @@
 class Twonb < Formula
   desc "AI-native markdown knowledge base with semantic search, RAG, and MCP server"
   homepage "https://github.com/apresai/2ndbrain"
-  version "0.13.1"
+  version "0.13.2"
   license "MIT"
   depends_on :macos
 
   if Hardware::CPU.intel?
-    url "https://github.com/apresai/2ndbrain/releases/download/v0.13.1/2nb_0.13.1_Darwin_x86_64.tar.gz"
-    sha256 "52fe1efe464edbf8ad19ad761719e3d225838234d1da4ba3cc8b406eae6b282f"
+    url "https://github.com/apresai/2ndbrain/releases/download/v0.13.2/2nb_0.13.2_Darwin_x86_64.tar.gz"
+    sha256 "81038f327d0f1390391c7c9919d502f9fe00dac7bc8552a388f7e0f5c46fd86a"
 
     define_method(:install) do
       bin.install "2nb"
@@ -23,8 +23,8 @@ class Twonb < Formula
     end
   end
   if Hardware::CPU.arm?
-    url "https://github.com/apresai/2ndbrain/releases/download/v0.13.1/2nb_0.13.1_Darwin_arm64.tar.gz"
-    sha256 "70b779dbc320053664e214c3b2d73290a16128cef46c749e9b46a4f9c1700936"
+    url "https://github.com/apresai/2ndbrain/releases/download/v0.13.2/2nb_0.13.2_Darwin_arm64.tar.gz"
+    sha256 "ce0174b9edce8a21730a1ed2f390c2f9b180e218fcb6eaa01df07307db5653af"
 
     define_method(:install) do
       bin.install "2nb"
@@ -51,6 +51,16 @@ class Twonb < Formula
 
       Shell completions are installed automatically. Restart your shell
       (or `source ~/.zshrc`) to pick them up.
+
+      Teach your AI coding agent about 2nb (installs the skill, the MCP server,
+      and a small always-loaded block in the agent's global memory file):
+
+        # every supported client (Claude Code, Warp, Claude Desktop, Codex):
+        2nb setup --all
+
+        # or just one client, and preview the skill without installing:
+        2nb skills install claude-code
+        2nb skills show claude-code
 
       For full documentation:
       https://github.com/apresai/2ndbrain
