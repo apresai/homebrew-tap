@@ -5,13 +5,13 @@
 class Gimage < Formula
   desc "AI-powered image generation and processing CLI with AWS Lambda deployment manager"
   homepage "https://github.com/apresai/gimage"
-  version "1.2.147"
+  version "1.2.150"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/apresai/gimage/releases/download/v1.2.147/gimage_1.2.147_Darwin_x86_64.tar.gz"
-      sha256 "e9fe1ce187112646de5e61570c78acd4788d410a928dc85af280ae3e580fc759"
+      url "https://github.com/apresai/gimage/releases/download/v1.2.150/gimage_1.2.150_Darwin_x86_64.tar.gz"
+      sha256 "8f044429d618caaa98c6230ad5201d84dea3c5235fd6c45382fc9e9f8c6c0360"
 
       define_method(:install) do
         bin.install "gimage"
@@ -19,8 +19,8 @@ class Gimage < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/apresai/gimage/releases/download/v1.2.147/gimage_1.2.147_Darwin_arm64.tar.gz"
-      sha256 "f322cb076f4020aa6d857c036a36981ebc6285c216f97edf790b23b370687d83"
+      url "https://github.com/apresai/gimage/releases/download/v1.2.150/gimage_1.2.150_Darwin_arm64.tar.gz"
+      sha256 "f189aa01205e4b440798e3c055dea77573a745056a76ad15247fd3c3739071a7"
 
       define_method(:install) do
         bin.install "gimage"
@@ -31,16 +31,16 @@ class Gimage < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/apresai/gimage/releases/download/v1.2.147/gimage_1.2.147_Linux_x86_64.tar.gz"
-      sha256 "d269242da29b008d93a147d494429dfac7afa61a97bf3274471bf22ce06591fa"
+      url "https://github.com/apresai/gimage/releases/download/v1.2.150/gimage_1.2.150_Linux_x86_64.tar.gz"
+      sha256 "42164858b1adbce3944f228a51ab8e3f753e4f05766a906693b84405df159c98"
       define_method(:install) do
         bin.install "gimage"
         bin.install "gimage-deploy"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/apresai/gimage/releases/download/v1.2.147/gimage_1.2.147_Linux_arm64.tar.gz"
-      sha256 "af696063da9caa75901d8be5685d10501010af3ef8a4aac9232cfad315120eba"
+      url "https://github.com/apresai/gimage/releases/download/v1.2.150/gimage_1.2.150_Linux_arm64.tar.gz"
+      sha256 "10934962249905f4cdf319ae5aa085ac157d4099ae2c8b32887f7becb7d08864"
       define_method(:install) do
         bin.install "gimage"
         bin.install "gimage-deploy"
