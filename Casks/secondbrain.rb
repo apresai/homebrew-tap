@@ -1,6 +1,6 @@
 cask "secondbrain" do
-  version "0.22.0"
-  sha256 "b2152d1ece099a3721b0822c2cb6a054c635c92831b0f1df5527e1f7e0424ecb"
+  version "0.22.1"
+  sha256 "b979f49e91b490ed4d288b4aedd2b0aae6aceb03c8906998d12110abf97bc242"
 
   url "https://github.com/apresai/2ndbrain/releases/download/v#{version}/SecondBrain-#{version}-arm64.dmg"
   name "SecondBrain"
